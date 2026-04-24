@@ -9,3 +9,4 @@ G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.dll
 G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\refint\CannabisMath.Core.dll
 G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.pdb
 G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\ref\CannabisMath.Core.dll
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.sourcelink.json

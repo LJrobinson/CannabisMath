@@ -100,3 +100,4 @@ G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\refint\CannabisMa
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.pdb
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.genruntimeconfig.cache
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\ref\CannabisMath.Core.Tests.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.sourcelink.json
