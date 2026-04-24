@@ -1,0 +1,11 @@
+G:\CannabisMath\src\CannabisMath.Core\bin\Debug\net8.0\CannabisMath.Core.deps.json
+G:\CannabisMath\src\CannabisMath.Core\bin\Debug\net8.0\CannabisMath.Core.dll
+G:\CannabisMath\src\CannabisMath.Core\bin\Debug\net8.0\CannabisMath.Core.pdb
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.AssemblyInfoInputs.cache
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.AssemblyInfo.cs
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.csproj.CoreCompileInputs.cache
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.dll
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\refint\CannabisMath.Core.dll
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\CannabisMath.Core.pdb
+G:\CannabisMath\src\CannabisMath.Core\obj\Debug\net8.0\ref\CannabisMath.Core.dll
