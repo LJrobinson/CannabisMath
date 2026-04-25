@@ -129,6 +129,7 @@ CannabisMath/
 
 ```bash
 dotnet add package CannabisMath.Core
+```
 
 Then add a project reference from another C# project:
 
