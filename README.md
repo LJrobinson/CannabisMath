@@ -1,6 +1,7 @@
 # CannabisMath
 
 ![.NET](https://img.shields.io/badge/.NET-8-blue)
+![NuGet](https://img.shields.io/nuget/v/CannabisMath.Core)
 ![Tests](https://img.shields.io/badge/tests-68%20passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -126,13 +127,8 @@ CannabisMath/
 
 ## Installation
 
-This project is not published to NuGet yet.
-
-For now, clone the repo and reference the project locally:
-
 ```bash
-git clone https://github.com/LJrobinson/CannabisMath.git
-```
+dotnet add package CannabisMath.Core
 
 Then add a project reference from another C# project:
 
