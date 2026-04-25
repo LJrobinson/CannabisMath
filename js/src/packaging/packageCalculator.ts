@@ -16,6 +16,16 @@ export class PackageCalculator {
     return this.round(remainder, 10);
   }
 
+  static breakdown(
+    totalGrams: number,
+    gramsPerUnit: number
+  ): { fullUnits: number; remainingGrams: number } {
+    const fullUnits = this.fullUnits(totalGrams, gramsPerUnit);
+    const remainingGrams = this.remainingGrams(totalGrams, gramsPerUnit);
+
+    return { fullUnits, remainingGrams };
+  }
+
   static calculateBreakdownResult(
     totalGrams: number,
     gramsPerUnit: number

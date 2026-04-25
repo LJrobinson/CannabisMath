@@ -2,6 +2,7 @@ export * from "./potency/potencyCalculator";
 export * from "./weights/weightConverter";
 export * from "./dosing/doseCalculator";
 export * from "./pricing/priceCalculator";
+export * from "./pricing/pricingResult";
 export * from "./rounding/roundingCalculator";
 export * from "./rounding/roundingMode";
 export * from "./rounding/roundingResult";

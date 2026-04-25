@@ -1,3 +1,5 @@
+import type { PricingResult } from "./pricingResult";
+
 export class PriceCalculator {
   static pricePerGram(price: number, grams: number): number {
     this.validateNonNegative(price, "price");
@@ -25,6 +27,34 @@ export class PriceCalculator {
     this.validatePercent(percentOff, "percentOff");
 
     return price * (percentOff / 100);
+  }
+
+  static calculatePricePerGramResult(
+    price: number,
+    grams: number
+  ): PricingResult {
+    const unitPrice = this.pricePerGram(price, grams);
+
+    return {
+      price,
+      quantity: grams,
+      unitPrice,
+      unitLabel: "gram",
+    };
+  }
+
+  static calculatePricePerMgResult(
+    price: number,
+    totalMg: number
+  ): PricingResult {
+    const unitPrice = this.pricePerMg(price, totalMg);
+
+    return {
+      price,
+      quantity: totalMg,
+      unitPrice,
+      unitLabel: "mg",
+    };
   }
 
   private static validateNonNegative(value: number, name: string): void {

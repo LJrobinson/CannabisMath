@@ -2,6 +2,13 @@ import { describe, it, expect } from "vitest";
 import { CannabisValueCalculator } from "./cannabisValueCalculator";
 
 describe("CannabisValueCalculator", () => {
+  it("calculates total mg from weight and potency", () => {
+    const result =
+      CannabisValueCalculator.totalMgFromWeightAndPotency(3.5, 20);
+
+    expect(result).toBe(700);
+  });
+
   it("calculates price per mg from weight and potency", () => {
     const result =
       CannabisValueCalculator.pricePerMgFromWeightAndPotency(

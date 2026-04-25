@@ -27,6 +27,10 @@ describe("Invalid input handling", () => {
     expect(() => PriceCalculator.pricePerGram(35, 0)).toThrow();
   });
 
+  it("pricing rejects percent over one hundred", () => {
+    expect(() => PriceCalculator.discountedPrice(100, 101)).toThrow();
+  });
+
   it("rounding rejects zero increment", () => {
     expect(() =>
       RoundingCalculator.roundToIncrement(10, 0, RoundingMode.Nearest)
@@ -37,8 +41,20 @@ describe("Invalid input handling", () => {
     expect(() => TaxCalculator.taxAmount(-100, 8.375)).toThrow();
   });
 
+  it("taxes reject percent over one hundred", () => {
+    expect(() => TaxCalculator.taxAmount(100, 101)).toThrow();
+  });
+
+  it("taxes reject decimal rate over one", () => {
+    expect(() => TaxCalculator.taxAmountFromRate(100, 1.1)).toThrow();
+  });
+
   it("packaging rejects zero unit size", () => {
     expect(() => PackageCalculator.calculateBreakdownResult(28, 0)).toThrow();
+  });
+
+  it("packaging allows zero total grams", () => {
+    expect(PackageCalculator.calculateBreakdownResult(0, 3.5).fullUnits).toBe(0);
   });
 
   it("composites reject zero potency via price per mg", () => {

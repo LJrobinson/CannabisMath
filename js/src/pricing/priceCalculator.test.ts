@@ -22,6 +22,24 @@ describe("PriceCalculator", () => {
     expect(PriceCalculator.discountedPrice(100, 100)).toBe(0);
   });
 
+  it("returns price per gram result breakdown", () => {
+    const result = PriceCalculator.calculatePricePerGramResult(35, 3.5);
+
+    expect(result.price).toBe(35);
+    expect(result.quantity).toBe(3.5);
+    expect(result.unitPrice).toBe(10);
+    expect(result.unitLabel).toBe("gram");
+  });
+
+  it("returns price per mg result breakdown", () => {
+    const result = PriceCalculator.calculatePricePerMgResult(25, 500);
+
+    expect(result.price).toBe(25);
+    expect(result.quantity).toBe(500);
+    expect(result.unitPrice).toBe(0.05);
+    expect(result.unitLabel).toBe("mg");
+  });
+
   it("throws on zero grams", () => {
     expect(() => PriceCalculator.pricePerGram(35, 0)).toThrow();
   });

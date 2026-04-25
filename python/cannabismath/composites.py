@@ -4,6 +4,16 @@ from .pricing import PriceCalculator
 
 class CannabisValueCalculator:
     @staticmethod
+    def total_mg_from_weight_and_potency(
+        weight_grams: float,
+        potency_percent: float
+    ) -> float:
+        return DoseCalculator.total_mg_from_percent(
+            weight_grams,
+            potency_percent
+        )
+
+    @staticmethod
     def price_per_mg_from_weight_and_potency(
         price: float,
         weight_grams: float,

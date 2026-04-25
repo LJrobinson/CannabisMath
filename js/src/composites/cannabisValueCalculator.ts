@@ -2,6 +2,13 @@ import { DoseCalculator } from "../dosing/doseCalculator";
 import { PriceCalculator } from "../pricing/priceCalculator";
 
 export class CannabisValueCalculator {
+  static totalMgFromWeightAndPotency(
+    weightGrams: number,
+    potencyPercent: number
+  ): number {
+    return DoseCalculator.totalMgFromPercent(weightGrams, potencyPercent);
+  }
+
   static pricePerMgFromWeightAndPotency(
     price: number,
     weightGrams: number,

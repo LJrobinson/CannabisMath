@@ -10,6 +10,13 @@ describe("PackageCalculator", () => {
     expect(PackageCalculator.remainingGrams(453.59237, 3.5)).toBeCloseTo(2.09237);
   });
 
+  it("calculates tuple-style breakdown", () => {
+    const result = PackageCalculator.breakdown(28, 3.5);
+
+    expect(result.fullUnits).toBe(8);
+    expect(result.remainingGrams).toBe(0);
+  });
+
   it("calculates full breakdown", () => {
     const result = PackageCalculator.calculateBreakdownResult(453.59237, 3.5);
 
@@ -21,6 +28,11 @@ describe("PackageCalculator", () => {
 
   it("throws on negative grams", () => {
     expect(() => PackageCalculator.fullUnits(-1, 3.5)).toThrow();
+  });
+
+  it("allows zero total grams", () => {
+    expect(PackageCalculator.fullUnits(0, 3.5)).toBe(0);
+    expect(PackageCalculator.remainingGrams(0, 3.5)).toBe(0);
   });
 
   it("throws on zero grams per unit", () => {

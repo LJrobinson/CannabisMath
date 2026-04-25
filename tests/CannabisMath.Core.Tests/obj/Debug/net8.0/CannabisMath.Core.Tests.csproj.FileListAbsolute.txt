@@ -18,6 +18,9 @@ G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\Microsoft.TestPla
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\Newtonsoft.Json.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\NuGet.Frameworks.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.IO.Pipelines.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Json.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\xunit.abstractions.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\xunit.assert.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\xunit.core.dll
@@ -87,6 +90,7 @@ G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\zh-Hans\Microsoft
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\CannabisMath.Core.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\CannabisMath.Core.pdb
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.csproj.AssemblyReference.cache
@@ -94,14 +98,10 @@ G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.AssemblyInfoInputs.cache
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.AssemblyInfo.cs
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.csproj.CoreCompileInputs.cache
+G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.sourcelink.json
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\Cannabis.14D7E9B1.Up2Date
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\refint\CannabisMath.Core.Tests.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.pdb
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.genruntimeconfig.cache
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\ref\CannabisMath.Core.Tests.dll
-G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.sourcelink.json
-G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.IO.Pipelines.dll
-G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Json.dll
-G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
