@@ -9,6 +9,9 @@ from cannabismath import (
     DoseCalculator,
     PriceCalculator,
     RoundingCalculator,
+    TaxCalculator,
+    PackageCalculator,
+    CannabisValueCalculator,
 )
 
 
@@ -120,3 +123,49 @@ def test_rounding_fixtures_match_expected_values():
             )
 
             assert result == pytest.approx(fixture["expectedDifference"])
+
+def test_tax_fixtures_match_expected_values():
+    fixtures = load_fixtures()
+
+    for fixture in fixtures["taxes"]:
+        if "expectedTaxAmount" in fixture:
+            result = TaxCalculator.tax_amount(
+                fixture["subtotal"],
+                fixture["taxRatePercent"]
+            )
+
+            assert result == pytest.approx(fixture["expectedTaxAmount"])
+
+        if "expectedTotal" in fixture:
+            result = TaxCalculator.total_with_combined_taxes(
+                fixture["subtotal"],
+                *fixture["taxRates"]
+            )
+
+            assert result == pytest.approx(fixture["expectedTotal"])
+
+def test_packaging_fixtures_match_expected_values():
+    fixtures = load_fixtures()
+
+    for fixture in fixtures["packaging"]:
+        result = PackageCalculator.calculate_breakdown_result(
+            fixture["totalGrams"],
+            fixture["gramsPerUnit"]
+        )
+
+        assert result.full_units == fixture["expectedFullUnits"]
+        assert result.remaining_grams == pytest.approx(
+            fixture["expectedRemainingGrams"]
+        )
+
+def test_composite_fixtures_match_expected_values():
+    fixtures = load_fixtures()
+
+    for fixture in fixtures["composites"]:
+        result = CannabisValueCalculator.price_per_mg_from_weight_and_potency(
+            fixture["price"],
+            fixture["weightGrams"],
+            fixture["potencyPercent"]
+        )
+
+        assert result == pytest.approx(fixture["expectedPricePerMg"])
