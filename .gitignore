@@ -1,0 +1,9 @@
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+artifacts/
+*.nupkg
+*.snupkg
+js/node_modules/
+js/dist/
