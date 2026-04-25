@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CannabisMath.Core.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea2f1fb380430e06892c18834c4c4465a6685aec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a489d646fe27032529f94679caf64607b42e0e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CannabisMath.Core.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CannabisMath.Core.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
