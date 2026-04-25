@@ -42,4 +42,17 @@ public static class PackageCalculator
             throw new ArgumentOutOfRangeException(parameterName, "Value must be greater than zero.");
         }
     }
+
+    public static PackageBreakdownResult CalculateBreakdownResult(decimal totalGrams, decimal gramsPerUnit)
+    {
+        var fullUnits = FullUnits(totalGrams, gramsPerUnit);
+        var remainingGrams = RemainingGrams(totalGrams, gramsPerUnit);
+
+        return new PackageBreakdownResult(
+            TotalGrams: totalGrams,
+            GramsPerUnit: gramsPerUnit,
+            FullUnits: fullUnits,
+            RemainingGrams: remainingGrams
+        );
+    }
 }

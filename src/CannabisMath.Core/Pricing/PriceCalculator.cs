@@ -57,4 +57,28 @@ public static class PriceCalculator
             throw new ArgumentOutOfRangeException(parameterName, "Percent must be between 0 and 100.");
         }
     }
+
+    public static PricingResult CalculatePricePerGramResult(decimal price, decimal grams)
+    {
+        var unitPrice = PricePerGram(price, grams);
+
+        return new PricingResult(
+            Price: price,
+            Quantity: grams,
+            UnitPrice: unitPrice,
+            UnitLabel: "gram"
+        );
+    }
+
+    public static PricingResult CalculatePricePerMgResult(decimal price, decimal totalMg)
+    {
+        var unitPrice = PricePerMg(price, totalMg);
+
+        return new PricingResult(
+            Price: price,
+            Quantity: totalMg,
+            UnitPrice: unitPrice,
+            UnitLabel: "mg"
+        );
+    }
 }

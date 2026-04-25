@@ -76,4 +76,17 @@ public static class TaxCalculator
             throw new ArgumentOutOfRangeException(parameterName, "Rate must be between 0 and 1.");
         }
     }
+
+    public static TaxResult CalculateTaxResult(decimal subtotal, decimal taxRatePercent)
+    {
+        var taxAmount = TaxAmount(subtotal, taxRatePercent);
+        var total = subtotal + taxAmount;
+
+        return new TaxResult(
+            Subtotal: subtotal,
+            TaxRatePercent: taxRatePercent,
+            TaxAmount: taxAmount,
+            Total: total
+        );
+    }
 }
