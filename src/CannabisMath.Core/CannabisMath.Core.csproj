@@ -4,6 +4,22 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>CannabisMath.Core</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>LJ Robinson</Authors>
+    <Company>LJ Robinson</Company>
+    <Description>Cannabis calculation library for potency, dosing, weight conversions, pricing, packaging, taxes, rounding, and retail value calculations.</Description>
+    <PackageTags>cannabis;weed;thc;cbd;potency;dosing;pricing;taxes;rounding;dispensary;pos</PackageTags>
+    <PackageProjectUrl>https://github.com/LJrobinson/CannabisMath</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LJrobinson/CannabisMath</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
