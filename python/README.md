@@ -1,12 +1,3 @@
-Metadata-Version: 2.4
-Name: cannabismath
-Version: 0.1.2
-Summary: Cross-platform cannabis math library for potency, dosing, pricing, taxes, rounding, and retail calculations.
-Author: LJ Robinson
-License: MIT
-Requires-Python: >=3.9
-Description-Content-Type: text/markdown
-
 # CannabisMath (Python)
 
 CannabisMath is a cross-platform cannabis calculation library designed for accuracy, consistency, and real-world retail use.

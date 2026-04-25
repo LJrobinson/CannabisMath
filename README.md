@@ -3,6 +3,7 @@
 ![.NET](https://img.shields.io/badge/.NET-8-blue)
 ![NuGet](https://img.shields.io/nuget/v/CannabisMath.Core)
 ![NPM](https://img.shields.io/npm/v/@ljrobinson/cannabismath)
+![PyPI](https://img.shields.io/pypi/v/cannabismath)
 ![Tests](https://img.shields.io/badge/tests-132%20passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -96,10 +97,16 @@ CannabisMath/
 dotnet add package CannabisMath.Core
 ```
 
-### TypeScript (coming soon to NPM)
+### .js
 
 ```bash
 npm install cannabismath
+```
+
+### .py
+
+```bash
+pip install cannabismath
 ```
 
 ---
