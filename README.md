@@ -7,136 +7,80 @@
 ![Tests](https://img.shields.io/badge/tests-132%20passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**CannabisMath** is a cross-platform cannabis calculation library for potency, dosing, weight conversions, pricing, packaging, taxes, rounding, and retail value calculations.
+🚀 Overview
 
-Built for cannabis apps, dashboards, dispensary tooling, POS workflows, inventory systems, calculators, and data projects.
+CannabisMath is a cross-platform cannabis calculation engine built for accuracy, consistency, and real-world retail workflows.
 
-> Reliable weed math. Tested, reusable, and consistent across languages.
+It provides deterministic calculations across:
 
----
+C# (NuGet)
+TypeScript (NPM)
+Python (PyPI)
 
-## Status
+All implementations are validated against shared JSON fixtures, ensuring identical results across every platform.
 
-Current version: **v0.1.0**
+🔥 Why CannabisMath?
 
-- C# library published to NuGet
-- TypeScript port complete (in `/js`)
-- Full parity between C# and JS logic
-- 130+ combined tests across both implementations
+Cannabis calculations are often inconsistent across systems.
 
----
+Differences in:
 
-## Quick Start (C#)
+rounding rules
+potency formulas
+weight assumptions
+tax handling
 
-```csharp
-using CannabisMath.Core.Composites;
+lead to mismatched results, POS errors, and customer frustration.
 
-var pricePerMg = CannabisValueCalculator.PricePerMgFromWeightAndPotency(
-    price: 35m,
-    weightGrams: 3.5m,
-    potencyPercent: 20m
-);
-// 0.05
-```
+CannabisMath provides a single source of truth.
 
----
+✨ Features
+Potency (THC / CBD)
+Weight conversions
+Dosing calculations
+Pricing logic
+Tax calculations
+Rounding utilities (including nickel rounding)
+Packaging breakdowns
+Composite calculations
+⚡ Example
 
-## Quick Start (TypeScript)
+Python:
 
-```ts
-import { CannabisValueCalculator } from "./js/src/composites/cannabisValueCalculator";
+value = CannabisValueCalculator.price_per_mg_from_weight_and_potency(35, 3.5, 20)
 
-const result = CannabisValueCalculator.pricePerMgFromWeightAndPotency(
-  35,
-  3.5,
-  20
-);
-// 0.05
-```
+0.05
+🧠 Architecture
 
----
+One shared JSON fixture file is used to validate:
 
-## Why CannabisMath?
+C#
+TypeScript
+Python
 
-Cannabis calculations are often inconsistent across apps, dashboards, and POS systems. Differences in rounding, weight assumptions, potency formulas, and tax handling can lead to mismatched results and operational issues.
+Ensuring no calculation drift.
 
-CannabisMath provides a single, deterministic calculation layer to ensure consistent results across systems and languages.
+📦 Installation
 
----
-
-## Cross-Language Consistency
-
-This project maintains identical calculation logic across:
-
-- C# (.NET / NuGet)
-- TypeScript (Node / Web)
-
-Same inputs → same outputs → everywhere.
-
----
-
-## Project Structure
-
-```
-CannabisMath/
-  src/ (C# core library)
-  tests/ (C# tests)
-
-  js/
-    src/ (TypeScript implementation)
-    tests/ (Vitest)
-```
-
----
-
-## Installation
-
-### C#
-
-```bash
+C#:
 dotnet add package CannabisMath.Core
-```
 
-### .js
+TypeScript:
+npm install @ljrobinson/cannabismath
 
-```bash
-npm install cannabismath
-```
-
-### .py
-
-```bash
+Python:
 pip install cannabismath
-```
 
----
+🏗️ Use Cases
+POS systems
+Analytics dashboards
+Inventory tools
+Data pipelines
+Consumer calculators
+⚠️ Disclaimer
 
-## Test Coverage
+CannabisMath is a calculation library only.
 
-- C#: 68 tests
-- TypeScript: 64 tests
-
-Total: 130+ passing tests
-
----
-
-## Roadmap
-
-- NPM package publish
-- Python port
-- Shared cross-language test fixtures
-- Jurisdiction-aware tax configs
-- POS rounding strategies
-- Advanced pricing & margin tools
-
----
-
-## Disclaimer
-
-CannabisMath is a calculation library, not legal or tax advice.
-
----
-
-## License
+📄 License
 
 MIT

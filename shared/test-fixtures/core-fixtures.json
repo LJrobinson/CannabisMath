@@ -11,6 +11,18 @@
       "cbdPercent": 0.5,
       "cbdaPercent": 10,
       "expectedTotalCbd": 9.27
+    },
+    {
+      "name": "zero thc and zero thca",
+      "thcPercent": 0,
+      "thcaPercent": 0,
+      "expectedTotalThc": 0
+    },
+    {
+      "name": "thca only",
+      "thcPercent": 0,
+      "thcaPercent": 30,
+      "expectedTotalThc": 26.31
     }
   ],
   "weights": [
@@ -23,6 +35,16 @@
       "name": "exact pounds to grams",
       "pounds": 1,
       "expectedGrams": 453.59237
+    },
+    {
+      "name": "zero grams to retail eighths",
+      "grams": 0,
+      "expectedRetailEighths": 0
+    },
+    {
+      "name": "half pound to grams",
+      "pounds": 0.5,
+      "expectedGrams": 226.796185
     }
   ],
   "dosing": [
@@ -51,6 +73,18 @@
       "price": 25,
       "totalMg": 500,
       "expectedPricePerMg": 0.05
+    },
+    {
+      "name": "zero price per gram",
+      "price": 0,
+      "grams": 3.5,
+      "expectedPricePerGram": 0
+    },
+    {
+      "name": "small price per mg",
+      "price": 1,
+      "totalMg": 1000,
+      "expectedPricePerMg": 0.001
     }
   ],
   "rounding": [
@@ -64,6 +98,27 @@
       "originalValue": 10.03,
       "roundedValue": 10.05,
       "expectedDifference": 0.02
+    },
+    {
+      "name": "exact nickel stays same",
+      "value": 10.05,
+      "expectedRounded": 10.05
+    },
+    {
+      "name": "round down to nearest nickel",
+      "value": 10.02,
+      "expectedRounded": 10
+    },
+    {
+      "name": "round up to nearest nickel",
+      "value": 10.08,
+      "expectedRounded": 10.1
+    },
+    {
+      "name": "negative rounding difference",
+      "originalValue": 10.09,
+      "roundedValue": 10.05,
+      "expectedDifference": -0.04
     }
   ],
   "taxes": [
@@ -78,6 +133,18 @@
       "subtotal": 100,
       "taxRates": [10, 8.375],
       "expectedTotal": 118.375
+    },
+    {
+      "name": "zero tax amount",
+      "subtotal": 100,
+      "taxRatePercent": 0,
+      "expectedTaxAmount": 0
+    },
+    {
+      "name": "zero subtotal with combined taxes",
+      "subtotal": 0,
+      "taxRates": [10, 8.375],
+      "expectedTotal": 0
     }
   ],
   "packaging": [
@@ -87,6 +154,20 @@
       "gramsPerUnit": 3.5,
       "expectedFullUnits": 129,
       "expectedRemainingGrams": 2.09237
+    },
+    {
+      "name": "exact eighth breakdown",
+      "totalGrams": 28,
+      "gramsPerUnit": 3.5,
+      "expectedFullUnits": 8,
+      "expectedRemainingGrams": 0
+    },
+    {
+      "name": "less than one unit",
+      "totalGrams": 2,
+      "gramsPerUnit": 3.5,
+      "expectedFullUnits": 0,
+      "expectedRemainingGrams": 2
     }
   ],
   "composites": [
@@ -96,6 +177,13 @@
       "weightGrams": 3.5,
       "potencyPercent": 20,
       "expectedPricePerMg": 0.05
+    },
+    {
+      "name": "low price per mg from high potency",
+      "price": 20,
+      "weightGrams": 1,
+      "potencyPercent": 80,
+      "expectedPricePerMg": 0.025
     }
   ]
 }
