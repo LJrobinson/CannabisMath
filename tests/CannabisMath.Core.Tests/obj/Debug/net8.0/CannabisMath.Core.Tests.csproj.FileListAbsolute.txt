@@ -101,3 +101,7 @@ G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.genruntimeconfig.cache
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\ref\CannabisMath.Core.Tests.dll
 G:\CannabisMath\tests\CannabisMath.Core.Tests\obj\Debug\net8.0\CannabisMath.Core.Tests.sourcelink.json
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.IO.Pipelines.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\System.Text.Json.dll
+G:\CannabisMath\tests\CannabisMath.Core.Tests\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
