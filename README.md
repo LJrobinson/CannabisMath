@@ -2,6 +2,7 @@
 
 ![.NET](https://img.shields.io/badge/.NET-8-blue)
 ![NuGet](https://img.shields.io/nuget/v/CannabisMath.Core)
+![NPM](https://img.shields.io/npm/v/@ljrobinson/cannabismath)
 ![Tests](https://img.shields.io/badge/tests-132%20passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
