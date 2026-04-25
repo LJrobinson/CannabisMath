@@ -1,5 +1,9 @@
 # CannabisMath
 
+![.NET](https://img.shields.io/badge/.NET-8-blue)
+![Tests](https://img.shields.io/badge/tests-68%20passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 **CannabisMath** is a C# cannabis calculation library for potency, dosing, weight conversions, pricing, packaging, taxes, rounding, and retail value calculations.
 
 Built for cannabis apps, dashboards, dispensary tooling, POS workflows, inventory systems, calculators, and data projects.
@@ -12,7 +16,30 @@ Built for cannabis apps, dashboards, dispensary tooling, POS workflows, inventor
 
 Current version: **v0.1.0**
 
-CannabisMath is early but functional. The current release focuses on pure calculation logic with unit tests.
+CannabisMath is an early-stage library with a stable core calculation engine.
+
+---
+
+## Quick Start
+
+```csharp
+using CannabisMath.Core.Composites;
+
+var pricePerMg = CannabisValueCalculator.PricePerMgFromWeightAndPotency(
+    price: 35m,
+    weightGrams: 3.5m,
+    potencyPercent: 20m
+);
+// 0.05
+```
+
+---
+
+## Why CannabisMath?
+
+Cannabis calculations are often inconsistent across apps, dashboards, and POS systems. Differences in rounding, weight assumptions, potency formulas, and tax handling can lead to mismatched results and operational issues.
+
+CannabisMath provides a single, deterministic calculation layer to ensure consistent results across systems.
 
 ---
 
@@ -66,11 +93,11 @@ CannabisMath is early but functional. The current release focuses on pure calcul
   - Custom increment rounding
   - Rounding difference tracking
 
-
+---
 
 ## Project Structure
 
-
+```txt
 CannabisMath/
   src/
     CannabisMath.Core/
@@ -93,7 +120,7 @@ CannabisMath/
       Rounding/
       Taxes/
       Weights/
-
+```
 
 ---
 
@@ -103,193 +130,70 @@ This project is not published to NuGet yet.
 
 For now, clone the repo and reference the project locally:
 
-bash
+```bash
 git clone https://github.com/LJrobinson/CannabisMath.git
-
+```
 
 Then add a project reference from another C# project:
 
-bash
+```bash
 dotnet add reference path/to/CannabisMath/src/CannabisMath.Core/CannabisMath.Core.csproj
-
+```
 
 ---
 
-## Usage Examples
+## Examples
 
 ### Potency
 
-csharp
+```csharp
 using CannabisMath.Core.Potency;
 
 var totalThc = PotencyCalculator.CalculateTotalThc(
     thcPercent: 1.2m,
     thcaPercent: 24.8m
 );
-
-
-Formula:
-
-Total THC = THC + (THCA × 0.877)
-
-
----
+```
 
 ### Weight Conversions
 
-csharp
+```csharp
 using CannabisMath.Core.Weights;
 
 var eighths = WeightConverter.GramsToRetailEighths(28m);
-// 8
-
-
-csharp
-var grams = WeightConverter.ExactPoundsToGrams(1m);
-// 453.59237
-
-
----
+```
 
 ### Dosing
 
-csharp
+```csharp
 using CannabisMath.Core.Dosing;
 
-var totalMg = DoseCalculator.TotalMgFromPercent(
-    weightGrams: 3.5m,
-    potencyPercent: 20m
-);
-// 700mg
-
-
-csharp
-var dabMg = DoseCalculator.DabMg(
-    potencyPercent: 80m,
-    dabSizeGrams: 0.05m
-);
-// 40mg
-
-
----
+var totalMg = DoseCalculator.TotalMgFromPercent(3.5m, 20m);
+```
 
 ### Pricing
 
-csharp
+```csharp
 using CannabisMath.Core.Pricing;
 
-var pricePerGram = PriceCalculator.PricePerGram(
-    price: 35m,
-    grams: 3.5m
-);
-// 10
-
-
-csharp
-var pricePerMg = PriceCalculator.PricePerMg(
-    price: 25m,
-    totalMg: 500m
-);
-// 0.05
-
-
----
+var pricePerGram = PriceCalculator.PricePerGram(35m, 3.5m);
+```
 
 ### Packaging
 
-csharp
+```csharp
 using CannabisMath.Core.Packaging;
 
-var breakdown = PackageCalculator.Breakdown(
-    totalGrams: 453.59237m,
-    gramsPerUnit: 3.5m
-);
-
-// breakdown.fullUnits = 129
-// breakdown.remainingGrams = 2.09237
-
-
----
-
-### Composite Value Calculations
-
-csharp
-using CannabisMath.Core.Composites;
-
-var pricePerMg = CannabisValueCalculator.PricePerMgFromWeightAndPotency(
-    price: 35m,
-    weightGrams: 3.5m,
-    potencyPercent: 20m
-);
-// 0.05
-
-
----
-
-### Taxes
-
-csharp
-using CannabisMath.Core.Taxes;
-
-var tax = TaxCalculator.TaxAmount(
-    subtotal: 100m,
-    taxRatePercent: 8.375m
-);
-// 8.375
-
-
-csharp
-var total = TaxCalculator.TotalWithCombinedTaxes(
-    subtotal: 100m,
-    10m,
-    8.375m
-);
-// 118.375
-
-
----
+var breakdown = PackageCalculator.Breakdown(453.59237m, 3.5m);
+```
 
 ### Rounding
 
-csharp
+```csharp
 using CannabisMath.Core.Rounding;
 
-var rounded = RoundingCalculator.RoundCurrency(10.125m);
-// 10.13
-
-
-csharp
 var cashTotal = RoundingCalculator.RoundCashToNearestNickel(10.03m);
-// 10.05
-
-
-csharp
-var difference = RoundingCalculator.RoundingDifference(
-    originalValue: 10.03m,
-    roundedValue: 10.05m
-);
-// 0.02
-
-
----
-
-## Retail vs Exact Weight
-
-Cannabis retail commonly uses rounded package weights:
-
-1 eighth = 3.5g
-1 quarter = 7g
-1 half ounce = 14g
-1 ounce = 28g
-
-
-Scientific/legal conversions use exact weights:
-
-1 ounce = 28.349523125g
-1 pound = 453.59237g
-
-
-CannabisMath supports both.
+```
 
 ---
 
@@ -297,57 +201,45 @@ CannabisMath supports both.
 
 Run all tests:
 
-bash
+```bash
 dotnet test
-
+```
 
 Current test count:
 
 68 passing tests
 
-
 ---
 
 ## Design Goals
 
-CannabisMath is designed to be:
-
-* Simple to use
-* Deterministic
-* Well-tested
-* Decimal-based for financial and retail calculations
-* Easy to port to JavaScript, Python, and other languages
-* Useful for real cannabis retail, analytics, and inventory workflows
+- Simple to use
+- Deterministic
+- Well-tested
+- Decimal-based for financial and retail calculations
+- Easy to port to JavaScript and Python
+- Useful for real cannabis retail workflows
 
 ---
 
 ## Roadmap
 
-Planned future work:
-
-* NuGet package publishing
-* JavaScript / TypeScript port
-* Python port
-* Shared cross-language test fixtures
-* Result models / DTOs
-* Jurisdiction-aware tax configs
-* Nevada cannabis tax helpers
-* More COA / lab result calculations
-* Margin and markup calculations
-* Bundle and promo math
-* Inventory depletion helpers
+- NuGet package publishing
+- JavaScript / TypeScript port
+- Python port
+- Shared cross-language test fixtures
+- Result models / DTOs
+- Jurisdiction-aware tax configs
+- Margin and promo math
 
 ---
 
 ## Disclaimer
 
-CannabisMath is a calculation library, not legal, tax, compliance, medical, or financial advice.
-
-Cannabis laws, tax rates, labeling rules, and compliance requirements vary by jurisdiction and may change over time. Always verify results against current local regulations and official guidance.
+CannabisMath is a calculation library, not legal or tax advice.
 
 ---
 
 ## License
 
 MIT
-
