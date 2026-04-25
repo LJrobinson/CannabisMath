@@ -1,17 +1,30 @@
 {
-  "name": "js",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@ljrobinson/cannabismath",
+  "version": "0.1.0",
+  "description": "Cross-platform cannabis math library for potency, dosing, pricing, taxes, rounding, and retail calculations.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cannabis",
+    "weed",
+    "thc",
+    "cbd",
+    "dispensary",
+    "pos",
+    "calculations",
+    "math"
+  ],
+  "author": "LJ Robinson",
+  "license": "MIT",
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "tsup": "^8.0.0"
   }
 }

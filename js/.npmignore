@@ -1,0 +1,11 @@
+# Dev files
+src/**/*.test.ts
+test.ts
+tsconfig.json
+
+# Tooling
+vitest.config.*
+node_modules
+
+# Misc
+*.log
