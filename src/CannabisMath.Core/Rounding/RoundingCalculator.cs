@@ -72,4 +72,21 @@ public static class RoundingCalculator
             throw new ArgumentOutOfRangeException(parameterName, "Value must be greater than zero.");
         }
     }
+
+    public static RoundingResult RoundWithResult(
+        decimal value,
+        decimal increment,
+        RoundingMode mode)
+    {
+        var rounded = RoundToIncrement(value, increment, mode);
+        var difference = rounded - value;
+
+    return new RoundingResult(
+        OriginalValue: value,
+        RoundedValue: rounded,
+        Difference: difference,
+        Mode: mode,
+        Increment: increment
+    );
+    }
 }
