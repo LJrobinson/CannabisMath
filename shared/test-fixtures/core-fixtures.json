@@ -1,0 +1,101 @@
+{
+  "potency": [
+    {
+      "name": "total thc from thc and thca",
+      "thcPercent": 1.2,
+      "thcaPercent": 24.8,
+      "expectedTotalThc": 22.9496
+    },
+    {
+      "name": "total cbd from cbd and cbda",
+      "cbdPercent": 0.5,
+      "cbdaPercent": 10,
+      "expectedTotalCbd": 9.27
+    }
+  ],
+  "weights": [
+    {
+      "name": "grams to retail eighths",
+      "grams": 28,
+      "expectedRetailEighths": 8
+    },
+    {
+      "name": "exact pounds to grams",
+      "pounds": 1,
+      "expectedGrams": 453.59237
+    }
+  ],
+  "dosing": [
+    {
+      "name": "total mg from weight and potency",
+      "weightGrams": 3.5,
+      "potencyPercent": 20,
+      "expectedTotalMg": 700
+    },
+    {
+      "name": "dab mg",
+      "potencyPercent": 80,
+      "dabSizeGrams": 0.05,
+      "expectedMg": 40
+    }
+  ],
+  "pricing": [
+    {
+      "name": "price per gram",
+      "price": 35,
+      "grams": 3.5,
+      "expectedPricePerGram": 10
+    },
+    {
+      "name": "price per mg",
+      "price": 25,
+      "totalMg": 500,
+      "expectedPricePerMg": 0.05
+    }
+  ],
+  "rounding": [
+    {
+      "name": "cash to nearest nickel",
+      "value": 10.03,
+      "expectedRounded": 10.05
+    },
+    {
+      "name": "rounding difference",
+      "originalValue": 10.03,
+      "roundedValue": 10.05,
+      "expectedDifference": 0.02
+    }
+  ],
+  "taxes": [
+    {
+      "name": "tax amount",
+      "subtotal": 100,
+      "taxRatePercent": 8.375,
+      "expectedTaxAmount": 8.375
+    },
+    {
+      "name": "total with combined taxes",
+      "subtotal": 100,
+      "taxRates": [10, 8.375],
+      "expectedTotal": 118.375
+    }
+  ],
+  "packaging": [
+    {
+      "name": "pound to eighths breakdown",
+      "totalGrams": 453.59237,
+      "gramsPerUnit": 3.5,
+      "expectedFullUnits": 129,
+      "expectedRemainingGrams": 2.09237
+    }
+  ],
+  "composites": [
+    {
+      "name": "price per mg from weight and potency",
+      "price": 35,
+      "weightGrams": 3.5,
+      "potencyPercent": 20,
+      "expectedPricePerMg": 0.05
+    }
+  ]
+}
