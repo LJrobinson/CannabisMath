@@ -1,9 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# .NET
 bin/
 obj/
-[Bb]in/
-[Oo]bj/
-artifacts/
-*.nupkg
-*.snupkg
-js/node_modules/
-js/dist/
+
+# Node
+node_modules/
+dist/
+
+# Misc
+.vscode/
+.DS_Store
