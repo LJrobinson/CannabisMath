@@ -16,3 +16,6 @@ dist/
 # Misc
 .vscode/
 .DS_Store
+rust/Cargo.lock
+rust/target/
+
