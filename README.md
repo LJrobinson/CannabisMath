@@ -7,6 +7,7 @@ It provides deterministic cannabis calculations across:
 - C# / .NET
 - TypeScript / JavaScript
 - Python
+- Rust
 
 All implementations are validated against shared JSON fixtures to ensure identical results across every platform.
 
@@ -59,6 +60,14 @@ npm install @ljrobinson/cannabismath
 pip install cannabismath
 ```
 
+### Rust
+
+```bash
+cd rust
+cargo test
+cargo run --example basic_usage
+```
+
 ## Example
 
 ### Python
@@ -90,6 +99,7 @@ The same fixture data is used to test:
 - C#
 - TypeScript
 - Python
+- Rust
 
 This helps prevent calculation drift between platforms.
 
