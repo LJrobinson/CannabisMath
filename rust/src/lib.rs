@@ -1,4 +1,5 @@
 pub mod dosing;
+pub mod packaging;
 pub mod potency;
 pub mod pricing;
 pub mod rounding;
@@ -6,6 +7,8 @@ pub mod taxes;
 pub mod weights;
 
 pub use dosing::{dab_mg, total_mg_from_weight_and_potency};
+
+pub use packaging::{packaging_breakdown, PackagingBreakdown};
 
 pub use potency::{total_cbd, total_thc};
 
