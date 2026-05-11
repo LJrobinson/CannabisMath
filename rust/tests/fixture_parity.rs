@@ -1,7 +1,7 @@
 use serde::Deserialize;
 use std::fs;
 
-use rust::{
+use cannabismath::{
     composite_price_per_mg_from_weight_and_potency, dab_mg, grams_to_retail_eighths,
     packaging_breakdown, pounds_to_grams, price_per_gram, price_per_mg,
     round_to_nearest_nickel, rounding_difference, tax_amount, total_cbd, total_mg_from_weight_and_potency,

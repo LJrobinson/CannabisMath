@@ -1,7 +1,10 @@
 [package]
-name = "rust"
+name = "cannabismath"
 version = "0.1.0"
 edition = "2024"
+description = "Rust implementation of CannabisMath cannabis calculation utilities."
+license = "MIT"
+repository = "https://github.com/LJrobinson/CannabisMath"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
