@@ -10,5 +10,6 @@ pub use pricing::{price_per_gram, price_per_mg_from_weight_and_potency};
 pub use rounding::{round_to_decimals, round_to_nearest_nickel};
 
 pub use weights::{
-    eighths_to_grams, grams_to_ounces, grams_to_pounds, ounces_to_grams, pounds_to_grams,
+    eighths_to_grams, grams_to_ounces, grams_to_pounds, grams_to_retail_eighths, ounces_to_grams,
+    pounds_to_grams,
 };
