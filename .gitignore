@@ -18,4 +18,5 @@ dist/
 .DS_Store
 rust/Cargo.lock
 rust/target/
-
+kotlin/.gradle/
+kotlin/build/

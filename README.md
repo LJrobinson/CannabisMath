@@ -8,6 +8,7 @@ It provides deterministic cannabis calculations across:
 - TypeScript / JavaScript
 - Python
 - Rust
+- Kotlin / JVM
 
 All implementations are validated against shared JSON fixtures to ensure identical results across every platform.
 
@@ -68,6 +69,13 @@ cargo test
 cargo run --example basic_usage
 ```
 
+### Kotlin / JVM
+
+```bash
+cd kotlin
+./gradlew test
+```
+
 ## Example
 
 ### Python
@@ -100,6 +108,7 @@ The same fixture data is used to test:
 - TypeScript
 - Python
 - Rust
+- Kotlin
 
 This helps prevent calculation drift between platforms.
 
