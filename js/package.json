@@ -1,6 +1,6 @@
 {
   "name": "@ljrobinson/cannabismath",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Cross-platform cannabis math library for potency, dosing, pricing, taxes, rounding, and retail calculations.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

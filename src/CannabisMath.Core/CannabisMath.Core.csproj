@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>CannabisMath.Core</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.3.0</Version>
     <Authors>LJ Robinson</Authors>
     <Company>LJ Robinson</Company>
     <Description>Cannabis calculation library for potency, dosing, weight conversions, pricing, packaging, taxes, rounding, and retail value calculations.</Description>
