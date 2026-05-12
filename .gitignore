@@ -19,4 +19,4 @@ dist/
 rust/Cargo.lock
 rust/target/
 kotlin/.gradle/
-kotlin/build/
+kotlin/build/node_modules/
